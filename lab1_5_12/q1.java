@@ -1,9 +1,26 @@
-class q1 {
+import java.util.Scanner;
 
-	public static void main(String args[]) {
-		System.out.println("Kush Singh");
-		System.out.println("23052247");
-		System.out.println("CSE-32");
-		System.out.println("CSE");
-	}
+class q1 {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter your name");
+        String name = in.nextLine(); // Correct method: nextLine()
+        
+        System.out.println("Enter your Roll Number");
+        int rollno = in.nextInt(); // Read integer input
+        
+        in.nextLine(); // Consume the leftover newline character
+        
+        System.out.println("Enter your Section");
+        String section = in.nextLine(); // Correct method: nextLine()
+        
+        System.out.println("Enter your Branch");
+        String branch = in.nextLine(); // Correct method: nextLine()
+        
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollno);
+        System.out.println("Section: " + section);
+        System.out.println("Branch: " + branch);
+    }
 }

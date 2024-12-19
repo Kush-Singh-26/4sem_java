@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 class q4{
 	public static void main(String args[]){
-		Scanner myobj = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		System.out.println("Enter number");
-		int num = myobj.nextInt();
+		int num = in.nextInt();
 		int temp, sum = 0, r;
 		temp = num;
 		while(temp>0)
