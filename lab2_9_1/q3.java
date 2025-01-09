@@ -1,15 +1,10 @@
-import java.util.Scanner;
-
 class q3{
 	public static void main(String args[]){
-		Scanner in = new Scanner(System.in);
-		System.out.print("Enter no. of numbers :");
-		int n = in.nextInt();
+		int n =args.length;
 		int [] arr = new int[n];
-		System.out.printf("Enter %d numbers : ", n);
 		for(int i = 0;i<n;i++)
 		{
-			arr[i] = in.nextInt();
+			arr[i] = Integer.parseInt(args[i]);
 		}
 		for(int i = 0;i<n-1;i++)
 		{

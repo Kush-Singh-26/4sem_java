@@ -1,14 +1,10 @@
-import java.util.Scanner;
-
 class q2{
-	public static void main(String args[]){
-		Scanner in = new Scanner(System.in);
-		System.out.println("Enter 10 numbers : ");
+	public static void main(String[] args){
 		int noeven = 0;
 		int noodd = 0;
-		for(int i = 0;i<10;i++)
+		for(int i = 0;i<args.length;i++)
 		{
-			int temp = in.nextInt();
+			int temp = Integer.parseInt(args[i]);
 			if(temp%2 == 0)
 				noeven++;
 			else
