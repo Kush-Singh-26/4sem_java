@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class q2 {
     public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter Mark");
         
-        int mark = in.nextInt();
+        int mark = sc.nextInt();
         
         if (mark >= 90) {
             System.out.println("Mark: " + mark + " = O");

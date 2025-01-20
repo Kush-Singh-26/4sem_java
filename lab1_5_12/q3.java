@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class q3 {
     public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter a day number : ");
         
-        int day = in.nextInt();
+        int day = sc.nextInt();
         
         switch(day) {
             case 1:

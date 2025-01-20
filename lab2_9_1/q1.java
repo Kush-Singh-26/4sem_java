@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 class q1{
 	public static void main(String args[]){
-			Scanner in = new Scanner(System.in);
-			System.out.print("Enter first number : ");
-			int a = in.nextInt();
-			System.out.print("Enter second number : ");
-			int b = in.nextInt();
-			System.out.print("Enter third number : ");
-			int c = in.nextInt();
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter three number : ");
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int c = sc.nextInt();
 			
-			int max = (a > b) ? a : b;
-			max = (max > c) ? max : c;
+			int maxi = (a > b) ? a : b;
+			maxi = (maxi > c) ? maxi : c;
 			
-			System.out.println("Largest integer is : " + max);
+			System.out.println("Largest number is : " + maxi);
 	}
 }
 			
