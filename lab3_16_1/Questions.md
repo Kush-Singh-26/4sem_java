@@ -1,5 +1,5 @@
 # LAB 
-1. Aim of the program :Write a class file – box with three data members(length, width, height) 	and a method volume() . Also implement the application class Demo where an object of the box class is created with user entered dimensions and volume is printed.
+1. Aim of the program :Write a class file – box with three data members(length, width, height) 	and a method volume(). Also implement the application class Demo where an object of the box class is created with user entered dimensions and volume is printed.
  
 2.  Aim of the program :  Write a program in Java to create a class Rectangle having data members 	length and breadth and three methods called read, calculate and display to read the values of length and breadth,  calculate the area and perimeter of the rectangle and display the result  	respectively.
 Create a class named 'Rectangle' with two data members 'length' and 'breadth' and 
