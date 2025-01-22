@@ -7,7 +7,6 @@
 import java.util.Scanner;
 
 class Rectangle{
-    Scanner sc = new Scanner(System.in);
     int length;
     int breadth;
 

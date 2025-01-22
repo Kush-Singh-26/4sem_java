@@ -31,7 +31,7 @@ class q3 {
 
         System.out.println("\nDetails of Students:");
         for (Student student : students) {
-            System.out.println("Roll : " + student.roll + " Name : " + student.name + " CGPA : " + student.cgpa);
+            System.out.println("Roll : " + student.roll + ", Name : " + student.name + ", CGPA : " + student.cgpa);
         }
 
         Student lowestCgpaStudent = students[0];
