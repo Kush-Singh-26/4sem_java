@@ -22,7 +22,6 @@ class Box extends Plate {
         this.height = height;
     }
 
-    @Override
     void displayDimension() {
         super.displayDimension(); 
         System.out.println("Height = " + height);
@@ -37,7 +36,6 @@ class Wood_box extends Box {
         this.thick = thick;
     }
 
-    @Override
     void displayDimension() {
         super.displayDimension(); 
         System.out.println("Thick = " + thick);

@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-import javax.sql.rowset.spi.SyncResolver;
-
 class Twodimension {
     int length;
     int bredth;
