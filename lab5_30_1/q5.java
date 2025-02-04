@@ -7,9 +7,9 @@ class Employee {
 }
 
 class Developer extends Employee {
-    // void displayCompanyName() {
-    //     System.out.println("Developer's Company: " + companyName);
-    // }
+     void displayCompanyName() {
+         System.out.println("Developer's Company: " + companyName);
+     }
     // This will show error because method in Employye is final which 
     // prevents it from being overridden.
 }
@@ -21,8 +21,3 @@ class q5 {
         emp.displayCompanyName();
     }
 }
-
-
-
-
-
