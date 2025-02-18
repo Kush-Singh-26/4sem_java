@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 public class LoanManagerClient {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         LoanManager loanManager = new LoanManager();
         while (true) {
             System.out.println("1. Apply for a new Loan");
             System.out.println("2. View All Loan Application Status");
             System.out.println("3. Exit");
             System.out.print("Enter choice[1/2/3]: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            int choice = sc.nextInt();
+            sc.nextLine(); 
 
             switch (choice) {
                 case 1:
-                    applyForNewLoan(scanner, loanManager);
+                    applyForNewLoan(sc, loanManager);
                     break;
                 case 2:
                     viewAllLoanApplications(loanManager);
                     break;
                 case 3:
                     System.out.println("Exiting...");
-                    scanner.close();
+                    sc.close();
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -31,14 +31,14 @@ public class LoanManagerClient {
         }
     }
 
-    private static void applyForNewLoan(Scanner scanner, LoanManager loanManager) {
+    private static void applyForNewLoan(Scanner sc, LoanManager loanManager) {
         int loanTypeId;
         Customer customer;
         Loan loan;
 
         while (true) {
             System.out.print("Select a Loan Type Id (1-Personal, 2-Home, 3-Car): ");
-            loanTypeId = scanner.nextInt();
+            loanTypeId = sc.nextInt();
             loan = loanManager.getLoanTypeDetail(loanTypeId);
             if (loan != null) {
                 break;
@@ -52,8 +52,8 @@ public class LoanManagerClient {
 
         while (true) {
             System.out.print("Select a Customer Id (1-5): ");
-            int customerId = scanner.nextInt();
-            scanner.nextLine(); 
+            int customerId = sc.nextInt();
+            sc.nextLine(); 
             customer = loanManager.getCustomer(customerId);
             if (customer != null) {
                 break;
@@ -62,12 +62,12 @@ public class LoanManagerClient {
         }
 
         System.out.print("Enter Purpose of Loan: ");
-        String purpose = scanner.nextLine();
+        String purpose = sc.nextLine();
         System.out.print("Enter Amount of Loan: ");
-        double amount = scanner.nextDouble();
+        double amount = sc.nextDouble();
         System.out.print("Enter Tenure of Loan (in months): ");
-        int tenure = scanner.nextInt();
-        scanner.nextLine(); 
+        int tenure = sc.nextInt();
+        sc.nextLine(); 
 
         LoanApplication loanApplication = new LoanApplication(loanManager.getApplicationCount() + 1, customer, loan, purpose, amount, tenure);
         String statusMessage = loanManager.applyForLoan(loanApplication);
