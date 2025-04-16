@@ -23,28 +23,21 @@ class Time {
     int minutes;
     int seconds;
 
-    void inputmethod(int hours, int minutes, int seconds) {
-        boolean hasError = false;
-        
+    void inputmethod(int hours, int minutes, int seconds) throws HrsException, MinException, SecException {
         if (hours > 24 || hours < 0) {
-            System.out.println("Exception occurred: InvalidHourException:hour is not greater than 24");
-            hasError = true;
+            throw new HrsException("InvalidHourException: hour should be between 0 and 24");
         }
         if (minutes > 60 || minutes < 0) {
-            System.out.println("Exception occurred: InvalidMinuteException:minute is not greater than 60");
-            hasError = true;
+            throw new MinException("InvalidMinuteException: minute should be between 0 and 60");
         }
         if (seconds > 60 || seconds < 0) {
-            System.out.println("Exception occurred: InvalidSecondException:second is not greater than 60");
-            hasError = true;
+            throw new SecException("InvalidSecondException: second should be between 0 and 60");
         }
 
-        if (!hasError) {
-            this.hours = hours;
-            this.minutes = minutes;
-            this.seconds = seconds;
-            System.out.println("Correct Time-> " + hours + ":" + minutes + ":" + seconds);
-        }
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+        System.out.println("Correct Time-> " + hours + ":" + minutes + ":" + seconds);
     }
 }
 
@@ -62,6 +55,12 @@ class q4 {
         int seconds = sc.nextInt();
 
         Time time = new Time();
-        time.inputmethod(hours, minutes, seconds);
+
+        try {
+            time.inputmethod(hours, minutes, seconds);
+        } catch (HrsException | MinException | SecException e) {
+            System.out.println("Caught the exception");
+            System.out.println("Exception occurred: " + e.getMessage());
+        }
     }
 }
